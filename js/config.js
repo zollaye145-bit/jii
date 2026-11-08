@@ -5,7 +5,7 @@ export const SITE = {
   brand: "Ji Little Moments",
   maker: "Jihane",
   // International format, digits only (no +, no spaces). Orders are sent here on WhatsApp.
-  whatsapp: "212600000000",
+  whatsapp: "212622426570",
   instagram: "https://www.instagram.com/ji_little_moments",
   instagramHandle: "@ji_little_moments",
   email: "",            // optional: shown as a fallback contact if filled
