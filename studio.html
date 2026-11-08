@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Design studio — Ji Little Moments</title>
+  <meta name="description" content="Design your own crochet piece: choose the piece, size, colors, stitch and yarn, see it live and send the order on WhatsApp.">
+  <meta name="theme-color" content="#eceee8">
+  <meta property="og:title" content="Ji Little Moments — Handmade crochet">
+  <meta property="og:description" content="Design your own crochet piece. Madame Kadir makes it by hand, in your size and colors.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-head">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Ji Little Moments, home">
+        <img class="brand-mark" src="assets/favicon.svg" alt="">
+        <span>Ji Little Moments<small>by Madame Kadir</small></span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Menu"><span></span><span></span><span></span></button>
+      <nav class="nav" id="nav" aria-label="Main">
+        <a href="gallery.html">Gallery</a>
+        <a href="index.html#about">About</a>
+        <a href="#" data-instagram>Instagram</a>
+        <a class="btn" href="studio.html">Design your piece</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="studio">
+      <aside class="studio-stage" aria-label="Preview">
+        <div class="stage-top">
+          <div>
+            <h1 class="stage-title" id="stage-title">Sweater</h1>
+            <p class="stage-sub" id="stage-sub"></p>
+          </div>
+          <div class="stage-tools">
+            <button class="icon-btn" type="button" id="btn-share" aria-label="Copy a link to this design" title="Copy link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg></button>
+            <button class="icon-btn" type="button" id="btn-download" aria-label="Download the design as an image" title="Download image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M4 21h16"/></svg></button>
+            <button class="icon-btn" type="button" id="btn-save" aria-label="Save this design for later" title="Save for later"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></button>
+          </div>
+        </div>
+        <div class="stage-art" id="stage-art"></div>
+        <div class="stage-foot">
+          <div>
+            <div class="price" id="price">0</div>
+            <p class="price-note" id="price-note"></p>
+          </div>
+          <a class="btn" href="#step-order">Review and order</a>
+        </div>
+      </aside>
+
+      <div class="studio-panel">
+        <nav class="steps-nav" aria-label="Design steps" id="steps-nav">
+          <a href="#step-piece"><b>1</b>Piece</a>
+          <a href="#step-size"><b>2</b>Size</a>
+          <a href="#step-colors"><b>3</b>Colors</a>
+          <a href="#step-stitch"><b>4</b>Stitch</a>
+          <a href="#step-yarn"><b>5</b>Yarn</a>
+          <a href="#step-order"><b>6</b>Order</a>
+        </nav>
+
+        <form id="designer" novalidate>
+          <section class="block" id="step-piece">
+            <div class="block-head"><span class="n">1</span><h2>Choose a piece</h2></div>
+            <p class="small">Everything is crocheted to order, so any piece can be made in any size and color.</p>
+            <div class="tiles" id="piece-tiles"></div>
+            <div class="field-row" id="piece-options"></div>
+          </section>
+
+          <section class="block" id="step-size">
+            <div class="block-head"><span class="n">2</span><h2>Size and measurements</h2></div>
+            <p class="small" id="size-help">Pick a standard size, or switch on made to measure and enter your own numbers in centimetres.</p>
+            <div class="seg" id="size-seg" role="radiogroup" aria-label="Size"></div>
+            <div class="field-row"><label class="switch"><input type="checkbox" id="custom-toggle"> Made to measure</label></div>
+            <div class="measures" id="measures"></div>
+          </section>
+
+          <section class="block" id="step-colors">
+            <div class="block-head"><span class="n">3</span><h2>Yarn colors</h2></div>
+            <p class="small">Choose up to three colors. Start from a combination, then change any of them.</p>
+            <div class="combos" id="combos" aria-label="Color combinations"></div>
+            <div class="color-roles" id="color-roles" style="margin-top: var(--s5)"></div>
+          </section>
+
+          <section class="block" id="step-stitch">
+            <div class="block-head"><span class="n">4</span><h2>Stitch pattern</h2></div>
+            <p class="small">The pattern decides how your colors are used.</p>
+            <div class="tiles" id="pattern-tiles"></div>
+            <div class="field-row" id="stripe-row"></div>
+          </section>
+
+          <section class="block" id="step-yarn">
+            <div class="block-head"><span class="n">5</span><h2>Yarn</h2></div>
+            <p class="small">The fibre changes how the piece feels, how warm it is, and the price.</p>
+            <div class="tiles tiles--text" id="yarn-tiles"></div>
+          </section>
+
+          <section class="block" id="step-order">
+            <div class="block-head"><span class="n">6</span><h2>Review and order</h2></div>
+            <p class="small">Check your design, add your details, and send it to Madame Kadir on WhatsApp. She replies to confirm the price and the date before any work starts.</p>
+            <div class="summary" id="summary"></div>
+
+            <div class="order-form">
+              <div class="two">
+                <label class="input" id="f-name"><span>Your name</span><input name="name" autocomplete="name" required><small class="err"></small></label>
+                <label class="input" id="f-phone"><span>Phone (WhatsApp)</span><input name="phone" type="tel" autocomplete="tel" inputmode="tel" required><small class="err"></small></label>
+              </div>
+              <div class="two">
+                <label class="input"><span>City</span><input name="city" autocomplete="address-level2"></label>
+                <label class="input"><span>Delivery</span><select name="delivery"><option>Home delivery</option><option>Pickup</option></select></label>
+              </div>
+              <label class="input"><span>Notes for Madame Kadir <span class="small">(optional)</span></span><textarea name="notes" placeholder="A gift, a date you need it by, a detail you would like…"></textarea></label>
+              <div class="order-actions">
+                <button class="btn" type="submit">Send order on WhatsApp</button>
+                <span class="small" id="order-note"></span>
+              </div>
+              <p class="order-fineprint">Prices shown are estimates. The final price is confirmed by Madame Kadir before anything is made.</p>
+            </div>
+            <div id="confirm"></div>
+
+            <div id="saved-wrap" hidden style="margin-top: var(--s7)">
+              <h3>Your saved designs</h3>
+              <div class="saved" id="saved"></div>
+            </div>
+          </section>
+        </form>
+      </div>
+    </div>
+
+    <div class="mobile-bar" aria-hidden="false">
+      <div class="mini" id="mini-art"></div>
+      <div><div class="price" id="mini-price">0</div><span class="small" id="mini-days"></span></div>
+      <a class="btn btn--sm" href="#step-order">Order</a>
+    </div>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <a class="brand" href="index.html"><img class="brand-mark" src="assets/favicon.svg" alt=""><span>Ji Little Moments<small>by Madame Kadir</small></span></a>
+          <p style="margin-top: var(--s4); max-width: 26em">Handmade crochet, one piece at a time. Every order is made to measure.</p>
+        </div>
+        <div>
+          <h3>Visit</h3>
+          <ul><li><a href="gallery.html">Gallery</a></li><li><a href="studio.html">Design studio</a></li><li><a href="index.html#about">About</a></li></ul>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <ul><li><a href="#" data-whatsapp>WhatsApp</a></li><li><a href="#" data-instagram>Instagram</a></li></ul>
+        </div>
+      </div>
+      <div class="foot-base"><span>© <span data-year></span> Ji Little Moments</span><span>Made by hand, never in a factory.</span></div>
+    </div>
+  </footer>
+
+  <script type="module" src="js/site.js"></script>
+  <script type="module" src="js/studio.js"></script>
+</body>
+</html>
