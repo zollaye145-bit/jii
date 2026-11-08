@@ -407,7 +407,7 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   const f = new FormData(form);
   const c = Object.fromEntries(["name", "phone", "city", "delivery", "notes"].map((k) => [k, String(f.get(k) ?? "").trim()]));
-  const okName = fieldError("#f-name", c.name.length < 2 ? "Enter your name so Madame Kadir knows who the order is for." : "");
+  const okName = fieldError("#f-name", c.name.length < 2 ? "Enter your name so Jihane knows who the order is for." : "");
   const okPhone = fieldError("#f-phone", c.phone.replace(/\D/g, "").length < 8 ? "Enter a phone number with at least 8 digits." : "");
   const badMeasure = document.querySelector("#measures .has-error");
   if (!okName) return $("#f-name input").focus();
@@ -428,7 +428,7 @@ form.addEventListener("submit", (e) => {
 
   $("#confirm").innerHTML = `<div class="confirm" role="status" tabindex="-1">
     <h3>Your order is ready to send</h3>
-    <p>WhatsApp opened with your design filled in. Press send there, and Madame Kadir will reply to confirm the price and the date. Your reference is <span class="ref">${ref}</span>.</p>
+    <p>WhatsApp opened with your design filled in. Press send there, and Jihane will reply to confirm the price and the date. Your reference is <span class="ref">${ref}</span>.</p>
     <p>Want her to see the picture too? Download the image and attach it in the chat.</p>
     <div class="order-actions">
       <a class="btn btn--rose" href="${url}" target="_blank" rel="noopener">Open WhatsApp again</a>

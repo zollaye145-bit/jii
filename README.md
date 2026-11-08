@@ -1,6 +1,6 @@
 # Ji Little Moments
 
-Website for **Madame Kadir**'s handmade crochet ([@ji_little_moments](https://www.instagram.com/ji_little_moments)).
+Website for **Jihane Anibou**'s handmade crochet ([@ji_little_moments](https://www.instagram.com/ji_little_moments)).
 
 - **Home** — hero with a sweater you can recolor, featured pieces, how ordering works, about.
 - **Gallery** — the collection hung like a museum wall, filtered by room, with a viewer for each piece (yarn, hours, status, price) and a button to commission one like it.
